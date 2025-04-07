@@ -13,7 +13,7 @@ import (
 
 // addCmd represents the add command
 var addCmd = &cobra.Command{
-	Use:   "add [description]",
+	Use:   "add <description>",
 	Short: "A command to add task to your todo list",
 	Long:  `A command that will add a new task to your current list`,
 	Args:  cobra.MatchAll(cobra.MinimumNArgs(1), cobra.MaximumNArgs(1)),

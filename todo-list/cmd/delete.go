@@ -14,7 +14,7 @@ import (
 
 // deleteCmd represents the delete command
 var deleteCmd = &cobra.Command{
-	Use:   "delete",
+	Use:   "delete <taskid>",
 	Short: "delete a task from the list",
 	Long:  `this will delete the specified task from your todo list`,
 	Args: func(cmd *cobra.Command, args []string) error {

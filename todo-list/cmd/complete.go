@@ -14,7 +14,7 @@ import (
 
 // completeCmd represents the complete command
 var completeCmd = &cobra.Command{
-	Use:   "complete [todo index]",
+	Use:   "complete <taskid>",
 	Short: "mark task as complete",
 	Long:  `A function to change a task from the list to complete`,
 	Args: func(cmd *cobra.Command, args []string) error {

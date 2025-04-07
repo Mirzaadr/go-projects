@@ -81,11 +81,11 @@ func (todos *Todos) Complete(ID int) error {
 func (todos *Todos) Print(isAll bool) error {
 	t := *todos
 	// Create a new tabwriter.Writer instance.
-	w := tabwriter.NewWriter(os.Stdout, 0, 1, 1, ' ', 0)
+	w := tabwriter.NewWriter(os.Stdout, 5, 0, 4, ' ', 0)
 
 	// Write some data to the Writer.
 	if isAll {
-		fmt.Fprintln(w, "ID\tTask\tCreatedAt\tDone")
+		fmt.Fprintln(w, "ID\tTask\tCreated\tDone")
 		for _, todo := range t {
 			fmt.Fprintf(w, "%v\t%v\t%v\t%v\n", todo.ID, todo.Description, timediff.TimeDiff(todo.CreatedAt), todo.IsComplete)
 		}
