@@ -83,7 +83,7 @@ func (app *APIServer) handleDivide(w http.ResponseWriter, r *http.Request) {
 
 func (app *APIServer) handleSum(w http.ResponseWriter, r *http.Request) {
 	// parse body and validate it
-	var payload []int
+	var payload []float64
 	if err := app.parseJSON(r, &payload); err != nil {
 		app.badRequestResponse(w, r, err)
 		return

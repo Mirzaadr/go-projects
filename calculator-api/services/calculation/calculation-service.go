@@ -18,8 +18,8 @@ func (s *CalculationService) Divide(dividend, divisor float64) (float64, error) 
 	return dividend / divisor, nil
 }
 
-func (s *CalculationService) Sum(numbers []int) (int, error) {
-	result := 0
+func (s *CalculationService) Sum(numbers []float64) (float64, error) {
+	result := 0.0
 	for i := 0; i < len(numbers); i++ {
 		result += numbers[i]
 	}

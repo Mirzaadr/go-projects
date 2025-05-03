@@ -209,22 +209,22 @@ func TestSumArray(t *testing.T) {
 	calcService := CalculationService{}
 	tests := []struct {
 		name     string
-		numbers  []int
-		expected int
+		numbers  []float64
+		expected float64
 	}{
 		{
 			name:     "Positive numbers",
-			numbers:  []int{1, 2, 3, 4, 5},
+			numbers:  []float64{1, 2, 3, 4, 5},
 			expected: 15,
 		},
 		{
 			name:     "Mixed numbers",
-			numbers:  []int{-3, 4, -1, 0, 2},
+			numbers:  []float64{-3, 4, -1, 0, 2},
 			expected: 2,
 		},
 		{
 			name:     "Single number",
-			numbers:  []int{10},
+			numbers:  []float64{10},
 			expected: 10,
 		},
 	}
