@@ -46,6 +46,7 @@ func main() {
 	)
 	if err != nil {
 		logger.Error("error establishing db connection", "error", err)
+		os.Exit(1)
 	}
 
 	defer db.Close()
@@ -72,5 +73,6 @@ func main() {
 	err = srv.ListenAndServe()
 	if err != nil && !errors.Is(err, http.ErrServerClosed) {
 		logger.Error("an error occured", "error", err)
+		os.Exit(1)
 	}
 }
