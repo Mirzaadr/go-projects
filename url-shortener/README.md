@@ -28,3 +28,10 @@ This function expects the URL to redirect to, and the status code to use. In thi
 ### Database
 
 For this, you can choose any data store you want, personally I'd recommend using something such as Valkey/Redis however provided it has persistence enabled.
+
+### Todo
+- add expiration to link
+- use more permanent database (postgres, mysql, etc)
+- link validation (is link active, is exist in data, etc)
+- middleware (ratelimitter, requestid, etc)
+- save user_id with generated link

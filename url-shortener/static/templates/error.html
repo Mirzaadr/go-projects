@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="h-screen">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Short URL</title>
+    <link rel="icon" href="/static/assets/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+
+  <body class="bg-red-50 min-h-screen flex items-center justify-center text-gray-900">
+    <div class="w-full max-w-md bg-white shadow-md rounded-lg p-6 text-center">
+      <h1 class="text-3xl font-bold text-red-600 mb-2">Error {{ .Status }}</h1>
+      <p class="text-lg font-semibold mb-2">{{ .Message }}</p>
+      <p class="text-gray-700 mb-4">{{ .Description }}</p>
+      <a href="/" class="text-blue-500 hover:underline">Go back to home</a>
+    </div>
+  </body>
+</html>
